@@ -387,7 +387,7 @@ testdirContent['install-behavior'] = Dir({
       name: 'test-preinstall',
       version: '1.0.0',
       scripts: {
-        'preinstall': 'node -p "\'CWD:\' + process.cwd()"'
+        'preinstall': '"' + process.execPath + '" -p "\'CWD:\' + process.cwd()"'
       }
     })
   })
